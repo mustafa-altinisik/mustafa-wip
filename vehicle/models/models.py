@@ -2,14 +2,11 @@
 
 from odoo import models, fields, api
 
-# class vehicle(models.Model):
-#     _name = 'vehicle.vehicle'
+class vehicle(models.Model):
+    _name = 'res.vehicle'
+    _description = 'Vehicle'
+    _order = 'name'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+    name = fields.Char("Name", required=True, translate=True)
+    plate = fields.Char("Plate")
+    state = fields.Many2one('res.country.state', string='State', required=False)

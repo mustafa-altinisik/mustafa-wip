@@ -1,34 +1,30 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-    <!--
     <record model="ir.ui.view" id="vehicle.list">
       <field name="name">vehicle list</field>
-      <field name="model">vehicle.vehicle</field>
+      <field name="model">res.vehicle</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="plate"/>
+          <field name="state"/>
         </tree>
       </field>
     </record>
-    -->
 
     <!-- actions opening views on models -->
-    <!--
     <record model="ir.actions.act_window" id="vehicle.action_window">
-      <field name="name">vehicle window</field>
-      <field name="res_model">vehicle.vehicle</field>
+      <field name="name">vehicle window mustafa</field>
+      <field name="res_model">res.vehicle</field>
       <field name="view_mode">tree,form</field>
     </record>
-    -->
 
     <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="vehicle.action_server">
+
+<!--     <record model="ir.actions.server" id="vehicle.action_server">
       <field name="name">vehicle server</field>
-      <field name="model_id" ref="model_vehicle_vehicle"/>
+      <field name="model_id" ref="res_vehicle"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -37,24 +33,22 @@
           "res_model": self._name,
         }
       </field>
-    </record>
-    -->
+    </record> -->
 
     <!-- Top menu item -->
-    <!--
-    <menuitem name="vehicle" id="vehicle.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
+   
+ 
+    <menuitem name="vehicle" id="vehicle.menu_root" action="vehicle.action_window"/>
+
     <menuitem name="Menu 1" id="vehicle.menu_1" parent="vehicle.menu_root"/>
     <menuitem name="Menu 2" id="vehicle.menu_2" parent="vehicle.menu_root"/>
-    -->
+    
     <!-- actions -->
-    <!--
+
     <menuitem name="List" id="vehicle.menu_1_list" parent="vehicle.menu_1"
               action="vehicle.action_window"/>
-    <menuitem name="Server to list" id="vehicle" parent="vehicle.menu_2"
-              action="vehicle.action_server"/>
-    -->
+<!--     <menuitem name="Server to list" id="vehicle" parent="vehicle.menu_2"
+              action="vehicle.action_server"/> -->
+
   </data>
 </odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="vehicle_view" id="vehicle_view">
+            <field name="Name">vehicle_view</field>
+            <field name="Model">vehicle_view</field>
+            <field name="arch" type="xml">
+            </field>
+        </record>
+    </data>
+</odoo>
